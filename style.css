@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ruluko', sans-serif;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  background-color: #062340;
+  color: #f1f1f1;
+  width: 350px;
+  height: auto;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.35),
+              5px 3px 15px 0px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+.form .title {
+  font-size: 35px;
+}
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form .form-group label {
+  font-size: 18px;
+  text-align: start;
+  margin-bottom: 5px;
+}
+.form .form-group input, .form .form-group textarea {
+  border: none;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  box-shadow: 3px 3px 3px 0px rgba(194,194,194,0.95) inset;
+}
+.form .form-group input:focus, .form .form-group textarea:focus {
+  outline: none;
+}
+.form .btn {
+	display: inline-block;
+	padding: 20px;
+  margin-top: 30px;
+  border: none;
+	border-radius: 3px;
+	color: #062340;
+	text-transform: uppercase;
+	font-size: 20px;
+  font-weight: 600;
+	letter-spacing: 1.2px;
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+  box-shadow: 3px 3px 5px 0px rgba(221,240,160,0.25);
+}
+.form .btn::after{
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #c99407;
+	border-radius: 3px;
+	z-index: -2;
+}
+.form .btn::before {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #135918;
+	transition: all .3s;
+	border-radius: 3px;
+	z-index: -1;
+}
+.form .btn:hover {
+  color: #c99407;
+  cursor: pointer;
+}
+.form .btn:hover::before {
+  width: 100%;
+}
